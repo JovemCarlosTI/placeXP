@@ -11,86 +11,139 @@
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;700&family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
 
-			<!-- Estilos de reset do browser -->
-      <link rel="stylesheet" href="../assets/styles/normalize.css">
-      <link rel="stylesheet" href="../assets/styles/reset.css">
-
-      <link rel="stylesheet" href="../assets/styles/main.css">
-      <link rel="stylesheet" href="../assets/styles/locais.css">
+			<!-- Tailwind -->
+			<script src="https://cdn.tailwindcss.com"></script>
+			<script type="module" src="../assets/tailwind-config.js"></script>
     
       <title>PlaceXP - Sua Próxima Viagem</title>
   </head>
-  <body>
+  <body class="bg-cinza-escuro font-hind text-branco">
 		<!-- Cabeçalho -->
-		<header>
-      <a href="../index.html"><img class="header--logo" src="../assets/images/logo.svg" alt="Logo placeXP"></a>
-			<ul class="header--ul">
-				<div id="header--search">
-					<input type="text" placeholder="Pesquise seu próximo destino...">
-					<button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"/></svg></button>
-				</div>
-				<nav>
-					<a href="../index.html">Home</a>
-					<a href="./signin-signup.html#login">Login</a>
-					<a href="./signin-signup.html#criar-conta">Criar conta</a>
-				</nav>
-			</ul>
-    </header>
+  <header
+    class="lg:items-center p-8 flex lg:p-4 flex-row flex-wrap justify-center lg:flex-nowrap lg:justify-between h-90 bg-polygon bg-no-repeat bg-right-top lg:ml-3 lg:h-21 lg:content-center">
+		<div class="flex flex-row justify-between w-[80vw] lg:w-fit lg:my-auto items-center">
+    <a href="../index.html" class="flex w-fit h-fit"><img class=" w-[20vw] max-h-[46px] max-w-20 min-h-[40px] select-none m-0 lg:w-[10vw]"
+        src="../assets/images/logo.svg" alt="Logo placeXP"></a>
+		<div class="lg:hidden w-fit">
+			<button class="navbar-burger flex items-center text-blue-600 p-3">
+				<svg class="block h-6 w-6 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+		</div>
+    <ul
+      class="lg:my-4  flex align-center pt-2 pb-0 my-0 mx-auto w-9/10 lg:flex-row lg:w-[90%] mt-0 flex-col lg:items-center">
+      <div id="header--search"
+        class="focus-within:fill-branco focus-within:border-branco bg-cinza-escuro fill-cinza-claro border-[2px] border-solid border-cinza-claro text-branco rounded-2xl mt-6 mb-6 items-center max-h-13 py-2 px-[1%] flex w-[80vw] justify-center mx-auto h-13 scroll-p-[8px 1%] lg:my-0 lg:mx-6 lg:w-[45vw]">
+        <input
+          class="focus:outline-0 branco bg-transparent rounded-2xl text-sm w-[90%] text-sm cinza-escuro h-full placeholder:text-cinza-escuro-placeholder"
+          type="text" placeholder="Pesquise seu próximo destino...">
+        <button class="grid-justify-items-center flex items-center flex m-0"><svg
+            classxmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z" />
+          </svg></button>
+      </div>
+      <nav class="hidden lg:text-branco lg:font-bold lg:flex lg:items-center lg:flex-row lg:justify-around lg:ms-6 grow-[2]">
+        <a class="m-3 text-[1.6rem] lg:text-[1.4rem] lg:mx-4 font-hind" href="../index.html">Home</a>
+        <a class="m-3 text-[1.6rem] lg:text-[1.4rem] lg:mx-4 font-hind"
+          href="./signin-signup.html#login">Login</a>
+        <a class="m-3 text-[1.6rem] lg:text-[1.4rem] lg:mx-4 font-hind"
+          href="./signin-signup.html#criar-conta">Criar conta</a>
+      </nav>
+    </ul>
+		
+			<div class="navbar-menu relative z-50 hidden transition-all-[.4s]">
+		<div class="navbar-backdrop fixed inset-0 bg-cinza-escuro opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-cinza-escuro border-r overflow-y-auto">
+			<div class="flex items-center mb-8 justify-between">
+<a href="../index.html" class="flex w-fit h-fit"><img class=" w-[20vw] max-h-[46px] max-w-20 min-h-[40px] select-none m-0 lg:w-[10vw]"
+        src="../assets/images/logo.svg" alt="Logo placeXP"></a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-md font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounde hover:underline hover:decoration-solid transition-all-[.4s] font-hind" href="../index.html">Home</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-md font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded hover:underline hover:decoration-solid transition-all-[.4s] font-hind" href="./signin-signup.html#login">Login</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-md font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded hover:underline hover:decoration-solid transition-all-[.4s] font-hind" href="./signin-signup.html#criar-conta">Criar Conta</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-md font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded hover:underline hover:decoration-solid transition-all-[.4s] font-hind" href="../index.html#sobre-nos">Sobre Nós</a>
+					</li>
+				</ul>
+			</div>
+			
+		</nav>
+	</div>
+    <!-- Forma azul inserida por CSS -->
+  </header>
     <main>
-      <section class="user">
-				<img class="user--img" src="../assets/images/locais/bica.jpg" alt="Foto da Bica" />
+      <section class="relative object-cover bg-cover bg-center p-0 inset-x-0">
+				<img class="relative object-cover bg-cover bg-center p-0 inset-x-0 h-[240px] w-[100vw]" src="../assets/images/locais/bica.jpg" alt="Foto da Bica" />
         
-        <div class="usuario">
-          <img class="usuario--foto"src="../assets/images/person.jpeg" alt="">
-          <div class="user--name-date">
-            <h2 class="usuario--nome">Mariana</h2>
-            <h3 class="usuario--data">Março, 2023</h3>
+        <div class="lg:max-w-[680px] lg:mx-auto  w-full h-[100px] flex flex-row absolute left-5 top-[200px]">
+          <img class="flex w-[100px] h-[100px] object-cover relative border border-cinza-escuro rounded-[50%] border-solid lg:h-[150px] lg:w-[150px]"src="../assets/images/person.jpeg" alt="">
+          <div class="w-full flex flex-col mt-14">
+            <h2 class="relative font-normal ml-[2%] mr-[5%] my-0 top-0 text-[1.5em]">Mariana</h2>
+            <h3 class="relative font-extralight text-[#AAAAAA] ml-[2%] mr-[5%] my-0 top-0 text-[1.17em]">Maio, 2023</h3>
           </div>
         </div>
         
       </section>
-      <section class="description">
-        <h1>Bica</h1>
-        <p>
+      <section class="lg:max-w-[680px] lg:mx-auto static mt-36 mb-[81px] mx-[5%] text-justify">
+        <h1 class="font-medium text-3xl leading-[45px] font-poppins mb-10">Bica</h1>
+        <p class="my-4 text-branco hind">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa ipsum at illum, minima quidem unde ab ad doloribus magni incidunt cupiditate dolor veritatis suscipit, dolore fuga repudiandae sapiente, sit quisquam!</p>
-        <p>
+        <p class="my-4 text-branco hind">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </section>
-      <section class="maps">
-        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15836.412497325713!2d-34.8772174!3d-7.1140469!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace7efed034e6d%3A0xba338927564cdbc4!2sParque%20Zoobot%C3%A2nico%20Arruda%20C%C3%A2mara%20(Bica)!5e0!3m2!1spt-BR!2sbr!4v1685394587585!5m2!1spt-BR!2sbr" width="600" height="450" style="justify-content: center; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <section class="lg:w-[70vw] lg:h-[520px] flex w-80 justify-center mb-[100px] m-auto">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15836.412497325713!2d-34.8772174!3d-7.1140469!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace7efed034e6d%3A0xba338927564cdbc4!2sParque%20Zoobot%C3%A2nico%20Arruda%20C%C3%A2mara%20(Bica)!5e0!3m2!1spt-BR!2sbr!4v1685394587585!5m2!1spt-BR!2sbr" width="600" height="450" style="justify-content: center; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
-    <footer>
-      <img class="footer--logo" src="../assets/images/logo.svg" alt="Logo placeXP">
-			<div class="footer--social">
-				<p class="footer--slogan">Uma comunidade apaixonada por experiências em outros lugares!</p>
+    <footer class="flex flex-col lg:flex-row w-[70vw] mt-20 mx-auto mb-10 lg:justify-between lg:w-[80vw] lg:mx-auto lg:align-top">
+      <img class=" mb-4 w-[30vw] max-w-[143px] my-auto mx-0 select-none lg:mt-0 lg:mb-auto" src="../assets/images/logo.svg" alt="Logo placeXP">
+			<div class="footer--social lg:max-w-[20vw] mb-14">
+				<p class=" mb-14 lg:mt-0">Uma comunidade apaixonada por experiências em outros lugares!</p>
 				<p>Entre em contato com a gente:</p>
-				<div class="footer--social-icons">
-					<i class="facebook-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-7 -2 24 24"><path fill="#00b4cc" d="M2.046 3.865v2.748H.032v3.36h2.014v9.986H6.18V9.974h2.775s.26-1.611.386-3.373H6.197V4.303c0-.343.45-.805.896-.805h2.254V0H6.283c-4.34 0-4.237 3.363-4.237 3.865z"/></svg></i>
-					<i class="instagram-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-2 -2 24 24"><g fill="#00b4cc"><path d="M14.017 0h-8.07A5.954 5.954 0 0 0 0 5.948v8.07a5.954 5.954 0 0 0 5.948 5.947h8.07a5.954 5.954 0 0 0 5.947-5.948v-8.07A5.954 5.954 0 0 0 14.017 0zm3.94 14.017a3.94 3.94 0 0 1-3.94 3.94h-8.07a3.94 3.94 0 0 1-3.939-3.94v-8.07a3.94 3.94 0 0 1 3.94-3.939h8.07a3.94 3.94 0 0 1 3.939 3.94v8.07z"/><path d="M9.982 4.819A5.17 5.17 0 0 0 4.82 9.982a5.17 5.17 0 0 0 5.163 5.164a5.17 5.17 0 0 0 5.164-5.164A5.17 5.17 0 0 0 9.982 4.82zm0 8.319a3.155 3.155 0 1 1 0-6.31a3.155 3.155 0 0 1 0 6.31z"/><circle cx="15.156" cy="4.858" r="1.237"/></g></svg></i>
-					<i class="twitter-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-2 -4 24 24"><path fill="#00b4cc" d="M20 1.907a8.292 8.292 0 0 1-2.356.637A4.07 4.07 0 0 0 19.448.31a8.349 8.349 0 0 1-2.607.98A4.12 4.12 0 0 0 13.846.015c-2.266 0-4.103 1.81-4.103 4.04c0 .316.036.625.106.92A11.708 11.708 0 0 1 1.393.754a3.964 3.964 0 0 0-.554 2.03a4.02 4.02 0 0 0 1.824 3.363A4.151 4.151 0 0 1 .805 5.64v.05c0 1.958 1.415 3.591 3.29 3.963a4.216 4.216 0 0 1-1.08.141c-.265 0-.522-.025-.773-.075a4.098 4.098 0 0 0 3.832 2.807a8.312 8.312 0 0 1-5.095 1.727c-.332 0-.658-.02-.979-.056a11.727 11.727 0 0 0 6.289 1.818c7.547 0 11.673-6.157 11.673-11.496l-.014-.523A8.126 8.126 0 0 0 20 1.907z"/></svg></i>
-					<i class="email-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="#00b4cc" d="M19 14.5v-9c0-.83-.67-1.5-1.5-1.5H3.49c-.83 0-1.5.67-1.5 1.5v9c0 .83.67 1.5 1.5 1.5H17.5c.83 0 1.5-.67 1.5-1.5zm-1.31-9.11c.33.33.15.67-.03.84L13.6 9.95l3.9 4.06c.12.14.2.36.06.51c-.13.16-.43.15-.56.05l-4.37-3.73l-2.14 1.95l-2.13-1.95l-4.37 3.73c-.13.1-.43.11-.56-.05c-.14-.15-.06-.37.06-.51l3.9-4.06l-4.06-3.72c-.18-.17-.36-.51-.03-.84s.67-.17.95.07l6.24 5.04l6.25-5.04c.28-.24.62-.4.95-.07z"/></svg></i>
+				<div class=" flex justify-between w-[80%] mt-2">
+					<i class="group border-[2px] border-solid border-azul-claro rounded-full cursor-pointer transition duration-400 ease-in-out p-2 hover:border-azul-escuro"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-7 -2 24 24"><path class="group-hover:fill-azul-escuro" fill="#00b4cc" d="M2.046 3.865v2.748H.032v3.36h2.014v9.986H6.18V9.974h2.775s.26-1.611.386-3.373H6.197V4.303c0-.343.45-.805.896-.805h2.254V0H6.283c-4.34 0-4.237 3.363-4.237 3.865z"/></svg></i>
+					<i class="group border-[2px] border-solid border-azul-claro rounded-full cursor-pointer transition duration-400 ease-in-out p-2 hover:border-azul-escuro"><svg class="group-hover:fill-azul-escuro" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-2 -2 24 24"><g fill="#00b4cc" class="group-hover:fill-azul-escuro"><path class="group-hover:fill-azul-escuro" d="M14.017 0h-8.07A5.954 5.954 0 0 0 0 5.948v8.07a5.954 5.954 0 0 0 5.948 5.947h8.07a5.954 5.954 0 0 0 5.947-5.948v-8.07A5.954 5.954 0 0 0 14.017 0zm3.94 14.017a3.94 3.94 0 0 1-3.94 3.94h-8.07a3.94 3.94 0 0 1-3.939-3.94v-8.07a3.94 3.94 0 0 1 3.94-3.939h8.07a3.94 3.94 0 0 1 3.939 3.94v8.07z"/><path class="group-hover:fill-azul-escuro" d="M9.982 4.819A5.17 5.17 0 0 0 4.82 9.982a5.17 5.17 0 0 0 5.163 5.164a5.17 5.17 0 0 0 5.164-5.164A5.17 5.17 0 0 0 9.982 4.82zm0 8.319a3.155 3.155 0 1 1 0-6.31a3.155 3.155 0 0 1 0 6.31z"/><circle cx="15.156" cy="4.858" r="1.237"/></g></svg></i>
+					<i class="group border-[2px] border-solid border-azul-claro rounded-full cursor-pointer transition duration-400 ease-in-out p-2 hover:border-azul-escuro"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-2 -4 24 24"><path fill="#00b4cc" class="group-hover:fill-azul-escuro" d="M20 1.907a8.292 8.292 0 0 1-2.356.637A4.07 4.07 0 0 0 19.448.31a8.349 8.349 0 0 1-2.607.98A4.12 4.12 0 0 0 13.846.015c-2.266 0-4.103 1.81-4.103 4.04c0 .316.036.625.106.92A11.708 11.708 0 0 1 1.393.754a3.964 3.964 0 0 0-.554 2.03a4.02 4.02 0 0 0 1.824 3.363A4.151 4.151 0 0 1 .805 5.64v.05c0 1.958 1.415 3.591 3.29 3.963a4.216 4.216 0 0 1-1.08.141c-.265 0-.522-.025-.773-.075a4.098 4.098 0 0 0 3.832 2.807a8.312 8.312 0 0 1-5.095 1.727c-.332 0-.658-.02-.979-.056a11.727 11.727 0 0 0 6.289 1.818c7.547 0 11.673-6.157 11.673-11.496l-.014-.523A8.126 8.126 0 0 0 20 1.907z"/></svg></i>
+					<i class="group border-[2px] border-solid border-azul-claro rounded-full cursor-pointer transition duration-400 ease-in-out p-2 hover:border-azul-escuro"><svg xmlns="http://www.w3.org/2000/svg" class="group-hover:fill-azul-escuro" width="24" height="24" viewBox="0 0 20 20"><path fill="#00b4cc" class="group-hover:fill-azul-escuro" d="M19 14.5v-9c0-.83-.67-1.5-1.5-1.5H3.49c-.83 0-1.5.67-1.5 1.5v9c0 .83.67 1.5 1.5 1.5H17.5c.83 0 1.5-.67 1.5-1.5zm-1.31-9.11c.33.33.15.67-.03.84L13.6 9.95l3.9 4.06c.12.14.2.36.06.51c-.13.16-.43.15-.56.05l-4.37-3.73l-2.14 1.95l-2.13-1.95l-4.37 3.73c-.13.1-.43.11-.56-.05c-.14-.15-.06-.37.06-.51l3.9-4.06l-4.06-3.72c-.18-.17-.36-.51-.03-.84s.67-.17.95.07l6.24 5.04l6.25-5.04c.28-.24.62-.4.95-.07z"/></svg></i>
 				</div>
 			</div>
 
-			<form class="footer-contato">
-				<legend class="footer-contato--title">Deixe sua mensagem</legend>
-				<input type="text" class="form-input"name="email" placeholder="Email" required/>
-				<input type="text" class="form-input"name="assunto" placeholder="Assunto" required/>
-				<textarea type="text" class="form-textarea"name="mensagem" placeholder="Escreva aqui sua mensagem..." rows="10" required></textarea>
-				<button type="submit" class="blue-button">Enviar Mensagem</button>
+			<form class="footer-contato lg:max-w-[20vw] mb-14">
+				<legend class=" font-bold text-2xl">Deixe sua mensagem</legend>
+				<input type="email" class="form-input border-[2px] border-solid border-cinza-claro py-3 px-3 transition duration-400 my-4 mx-0 w-full box-border focus:border-branco focus:text-branco bg-cinza-escuro rounded-[20px] outline-0 placeholder:text-cinza-escuro-placeholder"name="email" placeholder="Email" required/>
+				<input type="text" class="form-input border-[2px] border-solid border-cinza-claro py-3 px-3 transition duration-400 my-4 mx-0 w-full box-border focus:border-branco focus:text-branco bg-cinza-escuro rounded-[20px] outline-0 placeholder:text-cinza-escuro-placeholder"name="assunto" placeholder="Assunto" required/>
+				<textarea type="text" class="form-textarea border-[2px] border-solid border-cinza-claro py-3 px-3 transition duration-400 my-4 mx-0 w-full box-border focus:border-branco focus:text-branco max-h-[200px] bg-cinza-escuro rounded-[20px] outline-0 placeholder:text-cinza-escuro-placeholder"name="mensagem" placeholder="Escreva aqui sua mensagem..." rows="10" required></textarea>
+				<button type="submit" class="bg-azul-claro text-center w-full my-8 mx-0 p-3 rounded-[60px] transition ease-in-out duration-400 cursor-pointer hover:bg-azul-escuro">Enviar Mensagem</button>
 			</form>
 
-			<div class="footer--acesso-rapido">
-				<h2 class="footer--acesso-rapido-title blue-text">Acesso Rápido</h2>
+			<div class="footer--acesso-rapido mb-14">
+				<h2 class="footer--acesso-rapido-title text-azul-claro text-2xl font-bold lg:mb-6 lg:mt-0">Acesso Rápido</h2>
 				<ul class="footer--acesso-rapido-ul">
-					<li><a class="footer--acesso-rapido-a" href="../index.html">Home</a </li>
-					<li><a class="footer--acesso-rapido-a" href="../pages/signin-signup.html">Login/Criar Conta</a></li>
-					<li><a class="footer--acesso-rapido-a" href="../index.html#cards">Veja novos blogs!</a></li>
-          <li><a class="footer--acesso-rapido-a" href="../index.html#sobre-nos">Sobre o site</a></li>
+					<li class="py-2 px-0"><a class=" text-xl my-[15%] mx-0" href="../index.html">Home</a </li>
+					<li class="py-2 px-0"><a class=" text-xl my-[15%] mx-0" href="./signin-signup.html">Login/Criar Conta</a></li>
+					<li class="py-2 px-0"><a class=" text-xl my-[15%] mx-0" href="../index.html#cards">Veja novos blogs!</a></li>
+          <li class="py-2 px-0"><a class=" text-xl my-[15%] mx-0" href="../index.html#sobre-nos">Sobre o site</a></li>
 				</ul>
 			</div>
 		</footer>
+		<script src="../assets/menu/burguer-menu.js"></script>
   </body>
 </html>
 

@@ -1,28 +1,32 @@
 # Lista de To-Do
+## Prazo pro projeto: 28/06
 
-- [X] Checar/Aprovar cabeçalho implementado (mobile/desktop)
----
-- [X] Fazer html main da página home
-- [X] Fazer pequena seção sobre o placeXP (com uma descrição da missão do projeto, por exemplo)*
-- [X] Estilizar main da página home (mobile)
-- [ ] Fazer galeria "Outros Locais"*
-- [X] Estilizar main da página home (desktop)
----
-- [X] Fazer html footer
-- [X] Estilizar footer (mobile)
-- [X] Estilizar footer (desktop)
----
-- [X] Fazer html main signin/signup
-- [X] Estilizar main signin/signup (mobile)
-- [X] Estilizar main signin/signup (desktop)
----
-- [X] Fazer html blog lorem ipsum da bica
-- [X] Inserir mapa incorporado do Google Maps
-- [X] Estilizar blog lorem ipsum da bica (mobile)
-- [X] Estilizar blog lorem ipsum da bica (desktop)
-    
-- [X] Retirar comentários
-- [X] Rever imagens usadas e direitos autorais
-- [X] Revisar botões, links
-- [X] Revisar responsividade
-- [X] Revisar avaliação do projeto
+- [X] header com tailwind
+> - [X] Fazer menu hamburguer pra mobile ?
+> - [X] Corrigir tamanho input search
+> > - [X] Replicar correção pra outras páginas 
+- [X] Fazer index.html com tailwind
+> - [X] Fazer sobre-nos com tailwind
+> - [X] Fazer card com tailwind
+> - [X] Fazer carrossel de cards com tailwind
+> - [X] Fazer seção "O que é placeXP "com tailwind
+- [X] Fazer blogs com tailwind
+> - [X] Fazer primeiro modelo com blog da bica pro mobile 
+> - [X] Fazer primeiro modelo com blog da bica pro desktop 
+> - [X] Ajustar o width do blog
+> - [X] Copiar modificações com tailwind pra todos os blogs 
+- [X] Fazer login com tailwind
+> - [X] Fazer efeito hover no PC em login
+- [X] footer com tailwind
+- [X] Fazer svg ficar com fill azul escuro quando o hover está no pai 'i'
+- [X]  Exportar script pra arquivo separado
+- [X] Fazer input geral (footer, login, search)
+> Utilizar input do footer
+- [X] Fazer button geral (login, footer)
+> Utilizar button do footer
+
+# Dúvidas
+- [X] Margem do #header--search escapando da div pai
+- [X] Como fazer que com hover de elemento pai afete os elementos filhos? (usando 'group' no pai 'group-hover:' nos filhos)
+> - [X] Fazer svg ficar com fill azul escuro quando o hover está no pai 'i'
+> - [X] Fazer form de login altere com hover no form

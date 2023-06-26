@@ -1,194 +1,387 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br" class="overflow-x-hidden scroll-smooth">
 
-			<link rel="icon" href="./assets/images/logo.svg">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-			<link rel="preconnect" href="https://fonts.googleapis.com">
-			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;700&family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/images/logo.svg">
 
-			<!-- Estilos de reset do browser -->
-      <link rel="stylesheet" href="./assets/styles/normalize.css">
-      <link rel="stylesheet" href="./assets/styles/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;700&family=Poppins:wght@200;300;400;700&display=swap"
+    rel="stylesheet">
 
-      <link rel="stylesheet" href="./assets/styles/main.css">
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="assets/tailwind-config.js"></script>
+
+  <title>PlaceXP - Sua Próxima Viagem</title>
+</head>
+
+<body class="bg-cinza-escuro font-hind text-branco">
+  <!-- Cabeçalho -->
+  <header
+    class="lg:items-center p-8 flex lg:p-4 flex-row flex-wrap justify-center lg:flex-nowrap lg:justify-between h-90 bg-polygon bg-no-repeat bg-right-top lg:ml-3 lg:h-21 lg:content-center">
+		<div class="flex flex-row justify-between w-[80vw] lg:w-fit lg:my-auto items-center">
+    <a href="#" class="flex w-fit h-fit"><img class=" w-[20vw] max-h-[46px] max-w-20 min-h-[40px] select-none m-0 lg:w-[10vw]"
+        src="./assets/images/logo.svg" alt="Logo placeXP"></a>
+		<div class="lg:hidden w-fit">
+			<button class="navbar-burger flex items-center text-blue-600 p-3">
+				<svg class="block h-6 w-6 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+		</div>
+    <ul
+      class="lg:my-4  flex align-center pt-2 pb-0 my-0 mx-auto w-9/10 lg:flex-row lg:w-[90%] mt-0 flex-col lg:items-center">
+      <div id="header--search"
+        class="focus-within:fill-branco focus-within:border-branco bg-cinza-escuro fill-cinza-claro border-[2px] border-solid border-cinza-claro text-branco rounded-2xl mt-6 mb-6 items-center max-h-13 py-2 px-[1%] flex w-[80vw] justify-center mx-auto h-13 scroll-p-[8px 1%] lg:my-0 lg:mx-6 lg:w-[45vw]">
+        <input
+          class="focus:outline-0 branco bg-transparent rounded-2xl text-sm w-[90%] text-sm cinza-escuro h-full placeholder:text-cinza-escuro-placeholder"
+          type="text" placeholder="Pesquise seu próximo destino...">
+        <button class="grid-justify-items-center flex items-center flex m-0"><svg
+            classxmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z" />
+          </svg></button>
+      </div>
+      <nav class="hidden lg:text-branco lg:font-bold lg:flex lg:items-center lg:flex-row lg:justify-around lg:ms-6 grow-[2]">
+        <a class="m-3 text-[1.6rem] lg:text-[1.4rem] lg:mx-4 font-hind" href="#">Home</a>
+        <a class="m-3 text-[1.6rem] lg:text-[1.4rem] lg:mx-4 font-hind"
+          href="./pages/signin-signup.html#login">Login</a>
+        <a class="m-3 text-[1.6rem] lg:text-[1.4rem] lg:mx-4 font-hind"
+          href="./pages/signin-signup.html#criar-conta">Criar conta</a>
+      </nav>
+    </ul>
 		
-      <link rel="stylesheet" href="./assets/styles/home.css">
-    
-      <title>PlaceXP - Sua Próxima Viagem</title>
-  </head>
-  <body>
-		<!-- Cabeçalho -->
-		<header>
-      <a href="#"><img class="header--logo" src="./assets/images/logo.svg" alt="Logo placeXP"></a>
-			<ul class="header--ul">
-				<div id="header--search">
-					<input type="text" placeholder="Pesquise seu próximo destino...">
-					<button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"/></svg></button>
-				</div>
-				<nav>
-					<a href="#">Home</a>
-					<a href="./pages/signin-signup.html#login">Login</a>
-					<a href="./pages/signin-signup.html#criar-conta">Criar conta</a>
-				</nav>
-			</ul>
-			<!-- Forma azul inserida por CSS -->
-    </header>
-
-		<main>
-     <h1 class="main-title">Descubra sua próxima viagem!</h1>
-
-			<section class="cards" id="cards">
-				<div class="card">
-					<p class="card--date"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#343838" d="M5 22q-.825 0-1.413-.588T3 20V6q0-.825.588-1.413T5 4h1V3q0-.425.288-.713T7 2q.425 0 .713.288T8 3v1h8V3q0-.425.288-.713T17 2q.425 0 .713.288T18 3v1h1q.825 0 1.413.588T21 6v14q0 .825-.588 1.413T19 22H5Zm0-2h14V10H5v10ZM5 8h14V6H5v2Zm0 0V6v2Zm7 6q-.425 0-.713-.288T11 13q0-.425.288-.713T12 12q.425 0 .713.288T13 13q0 .425-.288.713T12 14Zm-4 0q-.425 0-.713-.288T7 13q0-.425.288-.713T8 12q.425 0 .713.288T9 13q0 .425-.288.713T8 14Zm8 0q-.425 0-.713-.288T15 13q0-.425.288-.713T16 12q.425 0 .713.288T17 13q0 .425-.288.713T16 14Zm-4 4q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm-4 0q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm8 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18Z"/></svg>23 de maio, 2023</p>
-					<img class="card--img"	src="./assets/images/locais/bica.jpg"
-						alt="Foz do Iguaçu"/>
-					<div class="card--content">
-              <h2 class="card--title"><a href="#" class="blue-text">Bica</a></h2>
-					  <p class="card--description">
-						O Parque Zoobotânico Arruda Câmara – Bica – é um  jardim zoobotânico localizado em João Pessoa, capital paraibana.
-					  </p>
-
-  					<div class="card--bottom">
-  							<p class="card--comments-qtd"><i class="comments-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#00b4cc" d="M17 9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-4 4H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z"/></svg></i>100 comentários</p>
-  						<p class="card--leia-mais"><a href="pages/bica.html" class="blue-text">Leia Mais</a></p>
-  					</div>
-          </div>
-          
-				</div>
-				</div>
-				<div class="card">
-					<p class="card--date"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#343838" d="M5 22q-.825 0-1.413-.588T3 20V6q0-.825.588-1.413T5 4h1V3q0-.425.288-.713T7 2q.425 0 .713.288T8 3v1h8V3q0-.425.288-.713T17 2q.425 0 .713.288T18 3v1h1q.825 0 1.413.588T21 6v14q0 .825-.588 1.413T19 22H5Zm0-2h14V10H5v10ZM5 8h14V6H5v2Zm0 0V6v2Zm7 6q-.425 0-.713-.288T11 13q0-.425.288-.713T12 12q.425 0 .713.288T13 13q0 .425-.288.713T12 14Zm-4 0q-.425 0-.713-.288T7 13q0-.425.288-.713T8 12q.425 0 .713.288T9 13q0 .425-.288.713T8 14Zm8 0q-.425 0-.713-.288T15 13q0-.425.288-.713T16 12q.425 0 .713.288T17 13q0 .425-.288.713T16 14Zm-4 4q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm-4 0q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm8 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18Z"/></svg>28 de maio, 2023</p>
-					<img class="card--img"
-						src="./assets/images/locais/foz-do-iguacu.jpg"
-						alt="Foz do Iguaçu"/>
-					<div class="card--content">
-              <h2 class="card--title"><a href="#" class="blue-text">Foz do Iguaçu</a></h2>
-					  <p class="card--description">
-						Foz do Iguaçu, cidade no estado brasileiro do Paraná. Visite as famosas Cataratas do Iguaçu, uma das maiores cachoeiras do mundo.
-					  </p>
-
-  					<div class="card--bottom">
-  						<div class="card--comments">
-  							<p class="card--comments-qtd"><i class="comments-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#00b4cc" d="M17 9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-4 4H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z"/></svg></i>5 comentários</p>
-  						</div>
-  						<p class="card--leia-mais"><a href="pages/fozdoiguacu.html" class="blue-text">Leia Mais</a></p>
-  					</div>
-          </div>
-          
-				</div>
-				</div><div class="card">
-					<p class="card--date"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#343838" d="M5 22q-.825 0-1.413-.588T3 20V6q0-.825.588-1.413T5 4h1V3q0-.425.288-.713T7 2q.425 0 .713.288T8 3v1h8V3q0-.425.288-.713T17 2q.425 0 .713.288T18 3v1h1q.825 0 1.413.588T21 6v14q0 .825-.588 1.413T19 22H5Zm0-2h14V10H5v10ZM5 8h14V6H5v2Zm0 0V6v2Zm7 6q-.425 0-.713-.288T11 13q0-.425.288-.713T12 12q.425 0 .713.288T13 13q0 .425-.288.713T12 14Zm-4 0q-.425 0-.713-.288T7 13q0-.425.288-.713T8 12q.425 0 .713.288T9 13q0 .425-.288.713T8 14Zm8 0q-.425 0-.713-.288T15 13q0-.425.288-.713T16 12q.425 0 .713.288T17 13q0 .425-.288.713T16 14Zm-4 4q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm-4 0q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm8 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18Z"/></svg>23 de maio, 2023</p>
-					<img class="card--img"
-						src="./assets/images/locais/porto-de-galinhas.jpg"
-						alt="Porto de Galinhas"/>
-					<div class="card--content">
-              <h2 class="card--title"><a href="#" class="blue-text">Porto de Galinhas</a></h2>
-					  <p class="card--description">
-					Porto de Galinhas está localizada em Pernambuco, no município de Ipujoca. É um dos principais destinos de praia do nordeste brasileiro.
-					  </p>
-
-  					<div class="card--bottom">
-  						<div class="card--comments">
-  							<p class="card--comments-qtd"><i class="comments-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#00b4cc" d="M17 9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-4 4H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z"/></svg></i>5 comentários</p>
-  						</div>
-  						<p class="card--leia-mais"><a href="pages/portodegalinhas.html" class="blue-text">Leia Mais</a></p>
-  					</div>
-          </div>
-          
-				</div>
-				</div><div class="card">
-					<p class="card--date"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#343838" d="M5 22q-.825 0-1.413-.588T3 20V6q0-.825.588-1.413T5 4h1V3q0-.425.288-.713T7 2q.425 0 .713.288T8 3v1h8V3q0-.425.288-.713T17 2q.425 0 .713.288T18 3v1h1q.825 0 1.413.588T21 6v14q0 .825-.588 1.413T19 22H5Zm0-2h14V10H5v10ZM5 8h14V6H5v2Zm0 0V6v2Zm7 6q-.425 0-.713-.288T11 13q0-.425.288-.713T12 12q.425 0 .713.288T13 13q0 .425-.288.713T12 14Zm-4 0q-.425 0-.713-.288T7 13q0-.425.288-.713T8 12q.425 0 .713.288T9 13q0 .425-.288.713T8 14Zm8 0q-.425 0-.713-.288T15 13q0-.425.288-.713T16 12q.425 0 .713.288T17 13q0 .425-.288.713T16 14Zm-4 4q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm-4 0q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm8 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18Z"/></svg>23 de maio, 2023</p>
-					<img class="card--img"
-						src="./assets/images/locais/maragogi-alagoas.jpg"
-						alt="Maragogi"/>
-					<div class="card--content">
-              <h2 class="card--title"><a href="#" class="blue-text">Maragogi</a></h2>
-					  <p class="card--description">	
-  Maragogi é uma pequena cidade localizada em Alagoas. Possui um belo litoral e se tornou um dos destinos mais procurados do Nordeste pela beleza de suas piscinas naturais e tranquilidade.
-					  </p>
-
-  					<div class="card--bottom">
-  						<div class="card--comments">
-  							<p class="card--comments-qtd"><i class="comments-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#00b4cc" d="M17 9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-4 4H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z"/></svg></i>5 comentários</p>
-  						</div>
-  						<p class="card--leia-mais"><a href="pages/maragogi.html" class="blue-text">Leia Mais</a></p>
-  					</div>
-          </div>
-          
-				</div>
-				</div><div class="card">
-					<p class="card--date"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#343838" d="M5 22q-.825 0-1.413-.588T3 20V6q0-.825.588-1.413T5 4h1V3q0-.425.288-.713T7 2q.425 0 .713.288T8 3v1h8V3q0-.425.288-.713T17 2q.425 0 .713.288T18 3v1h1q.825 0 1.413.588T21 6v14q0 .825-.588 1.413T19 22H5Zm0-2h14V10H5v10ZM5 8h14V6H5v2Zm0 0V6v2Zm7 6q-.425 0-.713-.288T11 13q0-.425.288-.713T12 12q.425 0 .713.288T13 13q0 .425-.288.713T12 14Zm-4 0q-.425 0-.713-.288T7 13q0-.425.288-.713T8 12q.425 0 .713.288T9 13q0 .425-.288.713T8 14Zm8 0q-.425 0-.713-.288T15 13q0-.425.288-.713T16 12q.425 0 .713.288T17 13q0 .425-.288.713T16 14Zm-4 4q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm-4 0q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm8 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18Z"/></svg>23 de maio, 2023</p>
-					<img class="card--img"
-						src="./assets/images/locais/pipacombr-capa.jpg"
-						alt="Praia de Pipa"/>
-					<div class="card--content">
-              <h2 class="card--title"><a href="#" class="blue-text">Praia de Pipa</a></h2>
-					  <p class="card--description">
-						A Praia de Pipa é um dos maiores paraísos do Rio Grande do Norte. Com praias lindas, centrinho agitado e bons restaurantes, ela é um dos lugares mais requisitados do Nordeste.
-					  </p>
-
-  					<div class="card--bottom">
-  						<div class="card--comments">
-  							<p class="card--comments-qtd"><i class="comments-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#00b4cc" d="M17 9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-4 4H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z"/></svg></i>5 comentários</p>
-  						</div>
-  						<p class="card--leia-mais"><a href="pages/praiadepipa.html" class="blue-text">Leia Mais</a></p>
-  					</div>
-          </div>
-          
-				</div>
-				</div>
-			</section>
-
-			<a class="ver-mais blue-button" href="#cards">Ver Mais</a>
-
-			<section class="sobre-nos" id="sobre-nos">
-			  <div class="sobre">
-				  <h2>O que é o PlaceXP?</h2>
-				    <p> O PlaceXP consiste em um website voltado ao turismo, permitindo a criação e divulgação do seu blog sobre suas viagens e experiências com certo lugar. A partir disso, o site organiza uma coletânea de blogs sobre viagens, auxiliando os visitantes em suas dúvidas e inspirações!</p> 
-				  </div>
-				     <div class="como-funciona">
-				    <h2>Como funciona?</h2>
-				    <p>Dentro da Barra de pesquisa localizada na parte superior do site, digite o destino que você deseja conhecer ou utilize os cards localizados na home. Com isso, você terá acesso a blogs e comentários falando sobre a experiência em cada local </p>
-				  </div>
-			</section>
-    </main>
-
-		<!-- Rodapé -->
-		<footer>
-      <img class="footer--logo" src="./assets/images/logo.svg" alt="Logo placeXP">
-			<div class="footer--social">
-				<p class="footer--slogan">Uma comunidade apaixonada por experiências em outros lugares!</p>
-				<p>Entre em contato com a gente:</p>
-				<div class="footer--social-icons">
-					<i class="facebook-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-7 -2 24 24"><path fill="#00b4cc" d="M2.046 3.865v2.748H.032v3.36h2.014v9.986H6.18V9.974h2.775s.26-1.611.386-3.373H6.197V4.303c0-.343.45-.805.896-.805h2.254V0H6.283c-4.34 0-4.237 3.363-4.237 3.865z"/></svg></i>
-					<i class="instagram-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-2 -2 24 24"><g fill="#00b4cc"><path d="M14.017 0h-8.07A5.954 5.954 0 0 0 0 5.948v8.07a5.954 5.954 0 0 0 5.948 5.947h8.07a5.954 5.954 0 0 0 5.947-5.948v-8.07A5.954 5.954 0 0 0 14.017 0zm3.94 14.017a3.94 3.94 0 0 1-3.94 3.94h-8.07a3.94 3.94 0 0 1-3.939-3.94v-8.07a3.94 3.94 0 0 1 3.94-3.939h8.07a3.94 3.94 0 0 1 3.939 3.94v8.07z"/><path d="M9.982 4.819A5.17 5.17 0 0 0 4.82 9.982a5.17 5.17 0 0 0 5.163 5.164a5.17 5.17 0 0 0 5.164-5.164A5.17 5.17 0 0 0 9.982 4.82zm0 8.319a3.155 3.155 0 1 1 0-6.31a3.155 3.155 0 0 1 0 6.31z"/><circle cx="15.156" cy="4.858" r="1.237"/></g></svg></i>
-					<i class="twitter-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-2 -4 24 24"><path fill="#00b4cc" d="M20 1.907a8.292 8.292 0 0 1-2.356.637A4.07 4.07 0 0 0 19.448.31a8.349 8.349 0 0 1-2.607.98A4.12 4.12 0 0 0 13.846.015c-2.266 0-4.103 1.81-4.103 4.04c0 .316.036.625.106.92A11.708 11.708 0 0 1 1.393.754a3.964 3.964 0 0 0-.554 2.03a4.02 4.02 0 0 0 1.824 3.363A4.151 4.151 0 0 1 .805 5.64v.05c0 1.958 1.415 3.591 3.29 3.963a4.216 4.216 0 0 1-1.08.141c-.265 0-.522-.025-.773-.075a4.098 4.098 0 0 0 3.832 2.807a8.312 8.312 0 0 1-5.095 1.727c-.332 0-.658-.02-.979-.056a11.727 11.727 0 0 0 6.289 1.818c7.547 0 11.673-6.157 11.673-11.496l-.014-.523A8.126 8.126 0 0 0 20 1.907z"/></svg></i>
-					<i class="email-icon icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="#00b4cc" d="M19 14.5v-9c0-.83-.67-1.5-1.5-1.5H3.49c-.83 0-1.5.67-1.5 1.5v9c0 .83.67 1.5 1.5 1.5H17.5c.83 0 1.5-.67 1.5-1.5zm-1.31-9.11c.33.33.15.67-.03.84L13.6 9.95l3.9 4.06c.12.14.2.36.06.51c-.13.16-.43.15-.56.05l-4.37-3.73l-2.14 1.95l-2.13-1.95l-4.37 3.73c-.13.1-.43.11-.56-.05c-.14-.15-.06-.37.06-.51l3.9-4.06l-4.06-3.72c-.18-.17-.36-.51-.03-.84s.67-.17.95.07l6.24 5.04l6.25-5.04c.28-.24.62-.4.95-.07z"/></svg></i>
-				</div>
+			<div class="navbar-menu relative z-50 hidden transition-all-[.4s]">
+		<div class="navbar-backdrop fixed inset-0 bg-cinza-escuro opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-cinza-escuro border-r overflow-y-auto">
+			<div class="flex items-center mb-8 justify-between">
+<a href="#" class="flex w-fit h-fit"><img class="w-[20vw] max-h-[46px] max-w-20 min-h-[40px] select-none m-0 lg:w-[10vw]"
+        src="./assets/images/logo.svg" alt="Logo placeXP"></a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
 			</div>
-
-			<form class="footer-contato">
-				<legend class="footer-contato--title">Deixe sua mensagem</legend>
-				<input type="text" class="form-input"name="email" placeholder="Email" required/>
-				<input type="text" class="form-input"name="assunto" placeholder="Assunto" required/>
-				<textarea type="text" class="form-textarea"name="mensagem" placeholder="Escreva aqui sua mensagem..." rows="10" required></textarea>
-				<button type="submit" class="blue-button">Enviar Mensagem</button>
-			</form>
-
-			<div class="footer--acesso-rapido">
-				<h2 class="footer--acesso-rapido-title blue-text">Acesso Rápido</h2>
-				<ul class="footer--acesso-rapido-ul">
-					<li><a class="footer--acesso-rapido-a" href="#">Home</a </li>
-					<li><a class="footer--acesso-rapido-a" href="./pages/signin-signup.html">Login/Criar Conta</a></li>
-					<li><a class="footer--acesso-rapido-a" href="#cards">Veja novos blogs!</a></li>
-          <li><a class="footer--acesso-rapido-a" href="#sobre-nos">Sobre o site</a></li>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-md font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounde hover:underline hover:decoration-solid transition-all-[.4s] font-hind" href="#">Home</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-md font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded hover:underline hover:decoration-solid transition-all-[.4s] font-hind" href="./pages/signin-signup.html#login">Login</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-md font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded hover:underline hover:decoration-solid transition-all-[.4s] font-hind" href="./pages/signin-signup.html#criar-conta">Criar Conta</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-md font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded hover:underline hover:decoration-solid transition-all-[.4s] font-hind" href="#sobre-nos">Sobre Nós</a>
+					</li>
 				</ul>
 			</div>
-		</footer>
-  </body>
+			
+		</nav>
+	</div>
+    <!-- Forma azul inserida por CSS -->
+  </header>
+
+  <main>
+    <h1 class=" font-poppins mx-[15vw] text-3xl mb-10 leading-[45px] text-center">Descubra sua próxima viagem!
+    </h1>
+
+    <section
+      class="flex flex-row w-[100vw] overflow-x-scroll overflow-y-hidden lg:w-[90vw] lg:overflow-x-hidden lg:flex-wrap lg:my-[32px] lg:mx-auto lg:justify-center"
+      id="cards">
+      <div
+        class=" first:ml-[15vw] my-0 mx-[5%] relative max-w-[390px] max-h-[505px] min-w-[70vw] last:mr-[15vw] hover:fill-branco hover:opacity-[.8rem] group transition ease-in-out duration-400 lg:text-center lg:my-[1.2rem] lg:mx-[15vw] lg:min-w-[350px] lg:max-w-[450px] lg:!mt-0 lg:!mx-5 lg:!mb-[58px]">
+        <p
+          class="group-hover:text-branco absolute mr-[20px] right-0 absolute m-[20px] bg-branco text-cinza-escuro rounded-[30px] p-[11px] text-[.8rem] z-[1] transition-all-[4s] rigth-0 flex items-center text-cinza-escuro text-justify indent-4 mr-[.5rem] font-normal leading-[21px] opacity-100 group-hover:bg-cinza-escuro transition ease-in-out duration-400">
+          <svg class="group-hover:fill-cinza-escuro fill-branco transition-all-[.4s] group-hover:text-branco"
+            lns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path class="group-hover:fill-branco fill-cinza-escuro transition ease-in-out duration-400"
+              d="M5 22q-.825 0-1.413-.588T3 20V6q0-.825.588-1.413T5 4h1V3q0-.425.288-.713T7 2q.425 0 .713.288T8 3v1h8V3q0-.425.288-.713T17 2q.425 0 .713.288T18 3v1h1q.825 0 1.413.588T21 6v14q0 .825-.588 1.413T19 22H5Zm0-2h14V10H5v10ZM5 8h14V6H5v2Zm0 0V6v2Zm7 6q-.425 0-.713-.288T11 13q0-.425.288-.713T12 12q.425 0 .713.288T13 13q0 .425-.288.713T12 14Zm-4 0q-.425 0-.713-.288T7 13q0-.425.288-.713T8 12q.425 0 .713.288T9 13q0 .425-.288.713T8 14Zm8 0q-.425 0-.713-.288T15 13q0-.425.288-.713T16 12q.425 0 .713.288T17 13q0 .425-.288.713T16 14Zm-4 4q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm-4 0q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm8 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18Z" />
+          </svg>23 de maio, 2023</p>
+        <img
+          class="relative w-full h-[240px] rounded-tl-[30px] rounded-tr-[30px] top-0 object-cover transition ease-in-out duration-400 group-hover:opacity-80"
+          src="./assets/images/locais/bica.jpg" alt="Foz do Iguaçu" />
+        <div
+          class="bg-branco rounded-bl-[30px] rounded-br-[30px] p-4 max-h-[280px] justify-around flex flex-col h-[45%] box-border">
+          <h2 class="text-left font-normal-[500px] text-[20px] leading-[30px] mt-[16px] text-azul-claro"><a
+              href="#">Bica</a></h2>
+          <p class="text-cinza-escuro text-justify indent-4 mr-[.5rem] font-normal text-[15px] leading-[19px] my-6">
+            O Parque Zoobotânico Arruda Câmara – Bica – é um jardim zoobotânico localizado em João Pessoa, capital
+            paraibana.
+          </p>
+
+          <div
+            class="items-center flex flex-row font-hind not-italic font-normal-[400] font-[14px] leading-[19px] justify-between mb-2">
+            <p class="text-[14px] flex items-center font-normal-[200] text-left text-cinza-escuro"><i
+                class="mr-2"><svg mlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24">
+                  <path class="fill-azul-claro"
+                    d="M17 9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-4 4H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z" />
+                </svg></i>100 comentários</p>
+            <p class="text-right mr-[4%]"><a href="pages/bica.html" class="text-azul-claro">Leia Mais</a></p>
+          </div>
+        </div>
+
+      </div>
+      </div>
+      <div
+        class=" my-0 mx-[5%] relative max-w-[390px] max-h-[505px] min-w-[70vw] last:mr-[15vw] hover: fill-branco hover:opacity-[.8rem] group transition ease-in-out duration-400 lg:text-center lg:my-[1.2rem] lg:mx-[15vw] lg:min-w-[350px] lg:max-w-[450px] lg:!mt-0 lg:!mx-5 lg:!mb-[58px]">
+        <p
+          class="group-hover:text-branco absolute mr-[20px] right-0 absolute m-[20px] bg-branco text-cinza-escuro rounded-[30px] p-[11px] text-[.8rem] z-[1] transition-all-[4s] rigth-0 flex items-center text-cinza-escuro text-justify indent-4 mr-[.5rem] font-normal leading-[21px] opacity-100 group-hover:bg-cinza-escuro transition ease-in-out duration-400">
+          <svg class="group-hover:fill-cinza-escuro fill-branco transition-all-[.4s] group-hover:text-branco"
+            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path fill="#343838" class="group-hover:fill-branco fill-cinza-escuro transition ease-in-out duration-400"
+              d="M5 22q-.825 0-1.413-.588T3 20V6q0-.825.588-1.413T5 4h1V3q0-.425.288-.713T7 2q.425 0 .713.288T8 3v1h8V3q0-.425.288-.713T17 2q.425 0 .713.288T18 3v1h1q.825 0 1.413.588T21 6v14q0 .825-.588 1.413T19 22H5Zm0-2h14V10H5v10ZM5 8h14V6H5v2Zm0 0V6v2Zm7 6q-.425 0-.713-.288T11 13q0-.425.288-.713T12 12q.425 0 .713.288T13 13q0 .425-.288.713T12 14Zm-4 0q-.425 0-.713-.288T7 13q0-.425.288-.713T8 12q.425 0 .713.288T9 13q0 .425-.288.713T8 14Zm8 0q-.425 0-.713-.288T15 13q0-.425.288-.713T16 12q.425 0 .713.288T17 13q0 .425-.288.713T16 14Zm-4 4q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm-4 0q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm8 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18Z" />
+          </svg>28 de maio, 2023</p>
+        <img
+          class="relative w-full h-[240px] rounded-tl-[30px] rounded-tr-[30px] top-0 object-cover transition ease-in-out duration-400 group-hover:opacity-80"
+          src="./assets/images/locais/foz-do-iguacu.jpg" alt="Foz do Iguaçu" />
+        <div
+          class="bg-branco rounded-bl-[30px] rounded-br-[30px] p-4 max-h-[280px] justify-around flex flex-col h-[45%] box-border">
+          <h2 class="text-left font-normal-[500px] text-[20px] leading-[30px] mt-[16px] text-azul-claro"><a href="#">Foz
+              do Iguaçu</a></h2>
+          <p class="text-cinza-escuro text-justify indent-4 mr-[.5rem] font-normal text-[15px] leading-[19px] my-6">
+            Foz do Iguaçu, cidade no estado brasileiro do Paraná. Visite as famosas Cataratas do Iguaçu, uma das maiores
+            cachoeiras do mundo.
+          </p>
+
+          <div class="">
+            <div
+              class="items-center flex flex-row font-hind not-italic font-normal-[400] font-[14px] leading-[19px] justify-between mb-2">
+              <p class="text-[14px] flex items-center font-normal-[200] text-left text-cinza-escuro"><i
+                  class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path fill="#00b4cc" class="fill-azul-claro"
+                      d="M17 9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-4 4H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z" />
+                  </svg></i>5 comentários</p>
+              <p class="text-right mr-[4%]"><a href="pages/fozdoiguacu.html" class="text-azul-claro">Leia Mais</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+      <div
+        class=" my-0 mx-[5%] relative max-w-[390px] max-h-[505px] min-w-[70vw] last:mr-[15vw] hover: fill-branco hover:opacity-[.8rem] group transition ease-in-out duration-400 lg:text-center lg:my-[1.2rem] lg:mx-[15vw] lg:min-w-[350px] lg:max-w-[450px] lg:!mt-0 lg:!mx-5 lg:!mb-[58px]">
+        <p
+          class="group-hover:text-branco absolute mr-[20px] right-0 absolute m-[20px] bg-branco text-cinza-escuro rounded-[30px] p-[11px] text-[.8rem] z-[1] transition-all-[4s] rigth-0 flex items-center text-cinza-escuro text-justify indent-4 mr-[.5rem] font-normal leading-[21px] opacity-100 group-hover:bg-cinza-escuro transition ease-in-out duration-400">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="group-hover:fill-cinza-escuro fill-branco transition-all-[.4s] group-hover:text-branco" width="20"
+            height="20" viewBox="0 0 24 24">
+            <path fill="#343838" class="group-hover:fill-branco fill-cinza-escuro transition ease-in-out duration-400"
+              d="M5 22q-.825 0-1.413-.588T3 20V6q0-.825.588-1.413T5 4h1V3q0-.425.288-.713T7 2q.425 0 .713.288T8 3v1h8V3q0-.425.288-.713T17 2q.425 0 .713.288T18 3v1h1q.825 0 1.413.588T21 6v14q0 .825-.588 1.413T19 22H5Zm0-2h14V10H5v10ZM5 8h14V6H5v2Zm0 0V6v2Zm7 6q-.425 0-.713-.288T11 13q0-.425.288-.713T12 12q.425 0 .713.288T13 13q0 .425-.288.713T12 14Zm-4 0q-.425 0-.713-.288T7 13q0-.425.288-.713T8 12q.425 0 .713.288T9 13q0 .425-.288.713T8 14Zm8 0q-.425 0-.713-.288T15 13q0-.425.288-.713T16 12q.425 0 .713.288T17 13q0 .425-.288.713T16 14Zm-4 4q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm-4 0q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm8 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18Z" />
+          </svg>23 de maio, 2023</p>
+        <img
+          class="relative w-full h-[240px] rounded-tl-[30px] rounded-tr-[30px] top-0 object-cover transition ease-in-out duration-400 group-hover:opacity-80"
+          src="./assets/images/locais/porto-de-galinhas.jpg" alt="Porto de Galinhas" />
+        <div
+          class="bg-branco rounded-bl-[30px] rounded-br-[30px] p-4 max-h-[280px] justify-around flex flex-col h-[45%] box-border">
+          <h2 class="text-left font-normal-[500px] text-[20px] leading-[30px] mt-[16px] text-azul-claro"><a
+              href="#">Porto de Galinhas</a></h2>
+          <p class="text-cinza-escuro text-justify indent-4 mr-[.5rem] font-normal text-[15px] leading-[19px] my-6">
+            Porto de Galinhas está localizada em Pernambuco, no município de Ipujoca. É um dos principais destinos de
+            praia do nordeste brasileiro.
+          </p>
+
+          <div class="">
+            <div
+              class="items-center flex flex-row font-hind not-italic font-normal-[400] font-[14px] leading-[19px] justify-between mb-2">
+              <p class="text-[14px] flex items-center font-normal-[200] text-left text-cinza-escuro"><i
+                  class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path fill="#00b4cc" class="fill-azul-claro"
+                      d="M17 9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-4 4H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z" />
+                  </svg></i>5 comentários</p>
+              <p class="text-right mr-[4%]"><a href="pages/portodegalinhas.html" class="text-azul-claro">Leia Mais</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+      <div
+        class=" my-0 mx-[5%] relative max-w-[390px] max-h-[505px] min-w-[70vw] last:mr-[15vw] hover: fill-branco hover:opacity-[.8rem] group transition ease-in-out duration-400 lg:text-center lg:my-[1.2rem] lg:mx-[15vw] lg:min-w-[350px] lg:max-w-[450px] lg:!mt-0 lg:!mx-5 lg:!mb-[58px]">
+        <p
+          class="group-hover:text-branco absolute mr-[20px] right-0 absolute m-[20px] bg-branco text-cinza-escuro rounded-[30px] p-[11px] text-[.8rem] z-[1] transition-all-[4s] rigth-0 flex items-center text-cinza-escuro text-justify indent-4 mr-[.5rem] font-normal leading-[21px] opacity-100 group-hover:bg-cinza-escuro transition ease-in-out duration-400">
+          <svg class="group-hover:fill-cinza-escuro fill-branco transition-all-[.4s] group-hover:text-branco"
+            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path fill="#343838" class="group-hover:fill-branco fill-cinza-escuro transition ease-in-out duration-400"
+              d="M5 22q-.825 0-1.413-.588T3 20V6q0-.825.588-1.413T5 4h1V3q0-.425.288-.713T7 2q.425 0 .713.288T8 3v1h8V3q0-.425.288-.713T17 2q.425 0 .713.288T18 3v1h1q.825 0 1.413.588T21 6v14q0 .825-.588 1.413T19 22H5Zm0-2h14V10H5v10ZM5 8h14V6H5v2Zm0 0V6v2Zm7 6q-.425 0-.713-.288T11 13q0-.425.288-.713T12 12q.425 0 .713.288T13 13q0 .425-.288.713T12 14Zm-4 0q-.425 0-.713-.288T7 13q0-.425.288-.713T8 12q.425 0 .713.288T9 13q0 .425-.288.713T8 14Zm8 0q-.425 0-.713-.288T15 13q0-.425.288-.713T16 12q.425 0 .713.288T17 13q0 .425-.288.713T16 14Zm-4 4q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm-4 0q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm8 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18Z" />
+          </svg>23 de maio, 2023</p>
+        <img
+          class="relative w-full h-[240px] rounded-tl-[30px] rounded-tr-[30px] top-0 object-cover transition ease-in-out duration-400 group-hover:opacity-80"
+          src="./assets/images/locais/maragogi-alagoas.jpg" alt="Maragogi" />
+        <div
+          class="bg-branco rounded-bl-[30px] rounded-br-[30px] p-4 max-h-[280px] justify-around flex flex-col h-[45%] box-border">
+          <h2 class="text-left font-normal-[500px] text-[20px] leading-[30px] mt-[16px] text-azul-claro"><a
+              href="#">Maragogi</a></h2>
+          <p class="text-cinza-escuro text-justify indent-4 mr-[.5rem] font-normal text-[15px] leading-[19px] my-6">
+            Maragogi é uma pequena cidade localizada em Alagoas. Possui um belo litoral e se tornou um dos destinos mais
+            procurados do Nordeste pela beleza de suas piscinas naturais e tranquilidade.
+          </p>
+
+          <div class="">
+            <div
+              class="items-center flex flex-row font-hind not-italic font-normal-[400] font-[14px] leading-[19px] justify-between mb-2">
+              <p class="text-[14px] flex items-center font-normal-[200] text-left text-cinza-escuro"><i
+                  class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path fill="#00b4cc" class="fill-azul-claro"
+                      d="M17 9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-4 4H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z" />
+                  </svg></i>5 comentários</p>
+              <p class="text-right mr-[4%]"><a href="pages/maragogi.html" class="text-azul-claro">Leia Mais</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+      <div
+        class=" last:mr-[15vw] my-0 mx-[5%] relative max-w-[390px] max-h-[505px] min-w-[70vw] last:mr-[15vw] hover: fill-branco hover:opacity-[.8rem] group transition ease-in-out duration-400 lg:text-center lg:my-[1.2rem] lg:mx-[15vw] lg:min-w-[350px] lg:max-w-[450px] lg:!mt-0 lg:!mx-5 lg:!mb-[58px]">
+        <p
+          class="group-hover:text-branco absolute mr-[20px] right-0 absolute m-[20px] bg-branco text-cinza-escuro rounded-[30px] p-[11px] text-[.8rem] z-[1] transition-all-[4s] rigth-0 flex items-center text-cinza-escuro text-justify indent-4 mr-[.5rem] font-normal leading-[21px] opacity-100 group-hover:bg-cinza-escuro transition ease-in-out duration-400">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="group-hover:fill-cinza-escuro fill-branco transition-all-[.4s] group-hover:text-branco" width="20"
+            height="20" viewBox="0 0 24 24">
+            <path fill="#343838" class="group-hover:fill-branco fill-cinza-escuro transition ease-in-out duration-400"
+              d="M5 22q-.825 0-1.413-.588T3 20V6q0-.825.588-1.413T5 4h1V3q0-.425.288-.713T7 2q.425 0 .713.288T8 3v1h8V3q0-.425.288-.713T17 2q.425 0 .713.288T18 3v1h1q.825 0 1.413.588T21 6v14q0 .825-.588 1.413T19 22H5Zm0-2h14V10H5v10ZM5 8h14V6H5v2Zm0 0V6v2Zm7 6q-.425 0-.713-.288T11 13q0-.425.288-.713T12 12q.425 0 .713.288T13 13q0 .425-.288.713T12 14Zm-4 0q-.425 0-.713-.288T7 13q0-.425.288-.713T8 12q.425 0 .713.288T9 13q0 .425-.288.713T8 14Zm8 0q-.425 0-.713-.288T15 13q0-.425.288-.713T16 12q.425 0 .713.288T17 13q0 .425-.288.713T16 14Zm-4 4q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm-4 0q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm8 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18Z" />
+          </svg>23 de maio, 2023</p>
+        <img
+          class="relative w-full h-[240px] rounded-tl-[30px] rounded-tr-[30px] top-0 object-cover transition ease-in-out duration-400 group-hover:opacity-80"
+          src="./assets/images/locais/pipacombr-capa.jpg" alt="Praia de Pipa" />
+        <div
+          class="bg-branco rounded-bl-[30px] rounded-br-[30px] p-4 max-h-[280px] justify-around flex flex-col h-[45%] box-border">
+          <h2 class="text-left font-normal-[500px] text-[20px] leading-[30px] mt-[16px] text-azul-claro"><a
+              href="#">Praia de Pipa</a></h2>
+          <p class="text-cinza-escuro text-justify indent-4 mr-[.5rem] font-normal text-[15px] leading-[19px] my-6">
+            A Praia de Pipa é um dos maiores paraísos do Rio Grande do Norte. Com praias lindas, centrinho agitado e
+            bons restaurantes, ela é um dos lugares mais requisitados do Nordeste.
+          </p>
+
+          <div class="">
+            <div
+              class="items-center flex flex-row font-hind not-italic font-normal-[400] font-[14px] leading-[19px] justify-between mb-2">
+              <p class="text-[14px] flex items-center font-normal-[200] text-left text-cinza-escuro"><i
+                  class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path fill="#00b4cc" class="fill-azul-claro"
+                      d="M17 9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-4 4H7a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Z" />
+                  </svg></i>5 comentários</p>
+              <p class="text-right mr-[4%]"><a href="pages/praiadepipa.html" class="text-azul-claro">Leia Mais</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+    <a class="flex justify-center bg-azul-claro text-center w-auto transition-all duration-[0.4s] cursor-pointer mx-[15vw] my-8 p-3 rounded-[60px] cursor-pointer hover:bg-azul-escuro"
+      href="#">Ver Mais</a>
+
+    <section class="w-[70vw] mt-[58px] mb-0 mx-auto my-20 text-center
+      " id="sobre-nos">
+      <div class="m-auto px-0 ">
+        <h2 class="mx-0 text-center text-branco font-bold text-2xl ">O que é o PlaceXP?</h2>
+        <p class="indent-[2rem] text-justify text-center leading-[1.6rem] my-4"> O PlaceXP consiste em um website voltado ao turismo, permitindo a criação e divulgação
+          do seu blog sobre suas viagens e experiências com certo lugar. A partir disso, o site organiza uma coletânea
+          de blogs sobre viagens, auxiliando os visitantes em suas dúvidas e inspirações!</p>
+      </div>
+      <div class="m-auto px-0">
+        <h2 class="text-center text-branco font-bold text-2xl ">Como funciona?</h2>
+        <p class="indent-[2rem] text-justify text-center leading-[1.6rem] my-4">Dentro da Barra de pesquisa localizada na parte superior do site, digite o
+          destino que você deseja conhecer ou utilize os  localizados na home. Com isso, você terá acesso a blogs e
+          comentários falando sobre a experiência em cada local </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer
+    class="flex flex-col lg:flex-row w-[70vw] mt-20 mx-auto mb-10 lg:justify-between lg:w-[80vw] lg:mx-auto lg:align-top">
+    <img class=" mb-4 w-[30vw] max-w-[143px] my-auto mx-0 select-none lg:mt-0 lg:mb-auto"
+      src="./assets/images/logo.svg" alt="Logo placeXP">
+    <div class="lg:max-w-[20vw] mb-14">
+      <p class=" mb-14 lg:mt-0">Uma comunidade apaixonada por experiências em outros lugares!</p>
+      <p>Entre em contato com a gente:</p>
+      <div class="flex justify-between w-[80%] mt-2">
+        <i
+          class="group border-[2px] border-solid border-azul-claro rounded-full cursor-pointer transition duration-400 ease-in-out p-2 hover:border-azul-escuro"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-7 -2 24 24">
+            <path class="group-hover:fill-azul-escuro" fill="#00b4cc"
+              d="M2.046 3.865v2.748H.032v3.36h2.014v9.986H6.18V9.974h2.775s.26-1.611.386-3.373H6.197V4.303c0-.343.45-.805.896-.805h2.254V0H6.283c-4.34 0-4.237 3.363-4.237 3.865z" />
+          </svg></i>
+        <i
+          class="group border-[2px] border-solid border-azul-claro rounded-full cursor-pointer transition duration-400 ease-in-out p-2 hover:border-azul-escuro"><svg
+            class="group-hover:fill-azul-escuro" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="-2 -2 24 24">
+            <g fill="#00b4cc" class="group-hover:fill-azul-escuro">
+              <path class="group-hover:fill-azul-escuro"
+                d="M14.017 0h-8.07A5.954 5.954 0 0 0 0 5.948v8.07a5.954 5.954 0 0 0 5.948 5.947h8.07a5.954 5.954 0 0 0 5.947-5.948v-8.07A5.954 5.954 0 0 0 14.017 0zm3.94 14.017a3.94 3.94 0 0 1-3.94 3.94h-8.07a3.94 3.94 0 0 1-3.939-3.94v-8.07a3.94 3.94 0 0 1 3.94-3.939h8.07a3.94 3.94 0 0 1 3.939 3.94v8.07z" />
+              <path class="group-hover:fill-azul-escuro"
+                d="M9.982 4.819A5.17 5.17 0 0 0 4.82 9.982a5.17 5.17 0 0 0 5.163 5.164a5.17 5.17 0 0 0 5.164-5.164A5.17 5.17 0 0 0 9.982 4.82zm0 8.319a3.155 3.155 0 1 1 0-6.31a3.155 3.155 0 0 1 0 6.31z" />
+              <circle cx="15.156" cy="4.858" r="1.237" />
+            </g>
+          </svg></i>
+        <i
+          class="group border-[2px] border-solid border-azul-claro rounded-full cursor-pointer transition duration-400 ease-in-out p-2 hover:border-azul-escuro"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-2 -4 24 24">
+            <path fill="#00b4cc" class="group-hover:fill-azul-escuro"
+              d="M20 1.907a8.292 8.292 0 0 1-2.356.637A4.07 4.07 0 0 0 19.448.31a8.349 8.349 0 0 1-2.607.98A4.12 4.12 0 0 0 13.846.015c-2.266 0-4.103 1.81-4.103 4.04c0 .316.036.625.106.92A11.708 11.708 0 0 1 1.393.754a3.964 3.964 0 0 0-.554 2.03a4.02 4.02 0 0 0 1.824 3.363A4.151 4.151 0 0 1 .805 5.64v.05c0 1.958 1.415 3.591 3.29 3.963a4.216 4.216 0 0 1-1.08.141c-.265 0-.522-.025-.773-.075a4.098 4.098 0 0 0 3.832 2.807a8.312 8.312 0 0 1-5.095 1.727c-.332 0-.658-.02-.979-.056a11.727 11.727 0 0 0 6.289 1.818c7.547 0 11.673-6.157 11.673-11.496l-.014-.523A8.126 8.126 0 0 0 20 1.907z" />
+          </svg></i>
+        <i
+          class="group border-[2px] border-solid border-azul-claro rounded-full cursor-pointer transition duration-400 ease-in-out p-2 hover:border-azul-escuro"><svg
+            xmlns="http://www.w3.org/2000/svg" class="group-hover:fill-azul-escuro" width="24" height="24"
+            viewBox="0 0 20 20">
+            <path fill="#00b4cc" class="group-hover:fill-azul-escuro"
+              d="M19 14.5v-9c0-.83-.67-1.5-1.5-1.5H3.49c-.83 0-1.5.67-1.5 1.5v9c0 .83.67 1.5 1.5 1.5H17.5c.83 0 1.5-.67 1.5-1.5zm-1.31-9.11c.33.33.15.67-.03.84L13.6 9.95l3.9 4.06c.12.14.2.36.06.51c-.13.16-.43.15-.56.05l-4.37-3.73l-2.14 1.95l-2.13-1.95l-4.37 3.73c-.13.1-.43.11-.56-.05c-.14-.15-.06-.37.06-.51l3.9-4.06l-4.06-3.72c-.18-.17-.36-.51-.03-.84s.67-.17.95.07l6.24 5.04l6.25-5.04c.28-.24.62-.4.95-.07z" />
+          </svg></i>
+      </div>
+    </div>
+
+    <form class=" lg:max-w-[20vw] mb-14">
+      <legend class=" font-bold text-2xl">Deixe sua mensagem</legend>
+      <input type="email"
+        class=" border-[2px] border-solid border-cinza-claro py-3 px-3 transition duration-400 my-4 mx-0 w-full box-border focus:border-branco focus:text-branco bg-cinza-escuro rounded-[20px] outline-0 placeholder:text-cinza-escuro-placeholder"
+        name="email" placeholder="Email" required />
+      <input type="text"
+        class=" border-[2px] border-solid border-cinza-claro py-3 px-3 transition duration-400 my-4 mx-0 w-full box-border focus:border-branco focus:text-branco bg-cinza-escuro rounded-[20px] outline-0 placeholder:text-cinza-escuro-placeholder"
+        name="assunto" placeholder="Assunto" required />
+      <textarea type="text"
+        class=" border-[2px] border-solid border-cinza-claro py-3 px-3 transition duration-400 my-4 mx-0 w-full box-border focus:border-branco focus:text-branco max-h-[200px] bg-cinza-escuro rounded-[20px] outline-0 placeholder:text-cinza-escuro-placeholder"
+        name="mensagem" placeholder="Escreva aqui sua mensagem..." rows="10" required></textarea>
+      <button type="submit"
+        class="bg-azul-claro text-center w-full my-8 mx-0 p-3 rounded-[60px] transition ease-in-out duration-400 cursor-pointer hover:bg-azul-escuro">Enviar
+        Mensagem</button>
+    </form>
+
+    <div class=" mb-14">
+      <h2 class=" text-azul-claro text-2xl font-bold lg:mb-6 lg:mt-0">Acesso Rápido</h2>
+      <ul>
+        <li class="py-2 px-0"><a class=" text-xl my-[15%] mx-0" href="#">Home</a </li>
+        <li class="py-2 px-0"><a class=" text-xl my-[15%] mx-0"
+            href="./pages/signin-signup.html">Login/Criar Conta</a></li>
+        <li class="py-2 px-0"><a class=" text-xl my-[15%] mx-0" href="#">Veja novos
+            blogs!</a></li>
+        <li class="py-2 px-0"><a class=" text-xl my-[15%] mx-0" href="#sobre-nos">Sobre o
+            site</a></li>
+      </ul>
+    </div>
+  </footer>
+
+	<script src="./assets/menu/burguer-menu.js"></script>
+</body>
+
 </html>
